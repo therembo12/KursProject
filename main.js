@@ -16,11 +16,45 @@ function loadData(url) {
     return person;
   }
 let person1 = loadData(url)
-for(key in person1) {
-    console.log(person1[key])
-}
-// personAll = loadData(person1)
+
+
+// Header
+
+let $header = document.querySelector('header')
+$header.classList.add('container-fluid')
+$header.style.backgroundColor = 'grey'
+
+let $header_content = document.createElement('div')
+    $header_content.classList.add('container')
+    $header_content.style.height = '100' + 'px'
+    $header_content.style.backgroundColor = 'whitesmoke'
+$header.appendChild($header_content)
+
+
+// Main
+let $main = document.querySelector('main')
+$main.classList.add('container')
+$main.style.backgroundColor = 'white'
+$main.style.height = '800' + 'px'
+$btn_ppl = document.createElement('button')
+$btn_ppl.classList.add('btn-primary','btn')
+$btn_ppl.textContent = 'Star Wars Heroes'
+$main.appendChild($btn_ppl)
 
 
 
-// LEsson 13 github
+
+
+// Footer
+let $footer = document.querySelector('footer')
+$footer.classList.add('container-fluid')
+$footer.style.backgroundColor = 'grey'
+
+let $footer_content = document.createElement('div')
+    $footer_content.classList.add('container')
+    $footer_content.style.height = '100' + 'px'
+    $footer_content.style.backgroundColor = 'whitesmoke'
+$footer.appendChild($footer_content)
+
+
+
