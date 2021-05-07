@@ -15,9 +15,8 @@ function loadData(url) {
     }
     return person;
   }
-let person1 = loadData(url)
-
-
+let DataBase = loadData(url)
+let persons = loadData(DataBase['people'])
 // Header
 
 let $header = document.querySelector('header')
@@ -36,12 +35,27 @@ let $main = document.querySelector('main')
 $main.classList.add('container')
 $main.style.backgroundColor = 'white'
 $main.style.height = '800' + 'px'
-$btn_ppl = document.createElement('button')
-$btn_ppl.classList.add('btn-primary','btn')
-$btn_ppl.textContent = 'Star Wars Heroes'
-$main.appendChild($btn_ppl)
 
+let $nav_bar = document.createElement('div')
+let $ul_ppl = document.createElement('ul')
+$ul_ppl.textContent = 'Star Wars Heroes'
 
+for (let i = 0; i < persons.results.length; i++){
+  let $ppl_content = document.createElement('li')
+    $ul_ppl.appendChild($ppl_content)
+    $ppl_content.textContent = `${persons.results[i].name}`
+}
+$ul_ppl.addEventListener('click',()=>{
+  for(let i = 0;i < 10;i++){
+    let $ppl_content = document.querySelectorAll('ul li')
+    $ppl_content[i].classList.toggle('hide')
+  }
+
+  
+})
+
+$nav_bar.appendChild($ul_ppl)
+$main.appendChild($nav_bar)
 
 
 
