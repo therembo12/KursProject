@@ -75,16 +75,14 @@ let vehicles_img = [
   "https://cdna.artstation.com/p/assets/images/images/009/354/520/large/jay-machado-cloudcar-0003.jpg?1518502674",
   "https://media.comicbook.com/2018/03/star-wars-hasbro-jabbas-sail-barge-haslab-1096980-1280x0.jpeg",
 ];
-console.log(person_img);
 // Links
 let DataBase = loadData(url);
 let persons = loadData(DataBase["people"]),
-  planets = loadData(DataBase["planets"]),
-  species = loadData(DataBase["species"]),
-  starships = loadData(DataBase["starships"]);
-vehicles = loadData(DataBase["vehicles"]);
+    planets = loadData(DataBase["planets"]),
+    species = loadData(DataBase["species"]),
+    starships = loadData(DataBase["starships"]);
+    vehicles = loadData(DataBase["vehicles"]);
 
-console.log(persons.results);
 // Header
 
 let $header = document.querySelector("header");
@@ -119,8 +117,6 @@ let $image_zone = document.createElement("div");
 $image_zone.classList.add("container", "col-6");
 $main_content.insertAdjacentElement("afterend", $content_zone);
 $main_content.insertAdjacentElement("afterend", $image_zone);
-console.log($main_content);
-console.log($main);
 
 $main.insertAdjacentElement("afterend", $main_content);
 
