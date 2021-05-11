@@ -95,7 +95,12 @@ let $header_content = document.createElement("div");
 $header_content.classList.add("container");
 $header_content.style.height = "100" + "px";
 $header_content.style.backgroundColor = "whitesmoke";
+let $header_text = document.createElement('h1')
+    $header_text.textContent = 'Primitive Swapi Wiki'
+    $header_text.style.textAlign = 'center'
+    $header_text.classList.add('t')
 $header.appendChild($header_content);
+$header_content.appendChild($header_text)
 // Main
 let $main = document.querySelector("main");
 $main.classList.add("container", "d-flex", "flex-row");
@@ -129,7 +134,6 @@ let $ul_ppl = document.createElement("ul"),
 
 $ul_ppl.textContent = "Star Wars Heroes";
 $ul_ppl.classList.add("ul_ppl");
-
 $ul_planet.textContent = "Planets";
 $ul_planet.classList.add("ul_planet");
 

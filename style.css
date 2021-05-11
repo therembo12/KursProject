@@ -32,3 +32,10 @@ ul li {
   background-image: url(https://www.bmsis.org/wp-content/uploads/2012/11/fon-slide.jpg);
   background-size: cover;
 }
+
+.t{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.ul_ppl li:hover , .ul_planet li:hover , .ul_species li:hover, .ul_starships li:hover, .ul_vehicles li:hover{
+  background-color: black;
+}
